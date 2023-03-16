@@ -1,0 +1,135 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-family:sans-serif;
+    background-color: rgba(151,151,151,0.03);
+}
+*{
+    box-sizing:border-box
+}
+
+#main{
+     height: 50vh;
+     width:100vw;
+     background-color: blanchedalmond;
+}
+
+#main img{
+    height: 100%;
+    width: 100%;
+}
+
+#story{
+    height: 50vh;
+    width: 100vw;
+    margin-top: 2px;
+    border-top: 1px solid rgba(53,53,53,0.1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+
+.story-img{
+    height:90%;
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center ;
+}
+.story-img img{
+    height: 100%;
+    width:200px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 30px rgba(53,53,53,1);
+}
+
+.story-text{
+    height: 90%;
+    width: 30vw;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 30px rgba(53,53,53,0.3);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+
+.story-text:hover{
+    background-color: #f1fcfd;
+}
+
+.story-text p{
+    font-size: 1rem;
+    margin:0px;
+    color:#3a3a3a;
+    text-align: left;
+}
+
+.rent-btn{
+    margin-top: 20px;
+    border-radius: 10px;
+    padding:10px;
+    background-color: rgba(135, 206, 235);
+}
+
+.rent-btn:hover{
+    background-color: rgb(80, 183, 228) ;
+    color: azure;
+}
+.rent-btn a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#about{
+    border-top: 1px solid rgba(53,53,53,0.1);
+    padding:10px;
+    color:#5e5e5e;
+}
+
+#about h1{
+    margin:30px;
+}
+
+footer{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  
+}
+
+footer{
+    color:#5e5e5e;
+    margin:10px 0px;
+    font-size:0.9rem;
+}
+
+
+/* resoponsiveness */
+
+@media(max-width:800px){
+    #story{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .story-img{
+        height: 50%;
+    }
+
+    .story-text{
+        height: 50%;
+        width:50%
+    }
+}

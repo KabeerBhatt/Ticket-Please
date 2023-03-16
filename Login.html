@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket PLease</title>
+
+    <!-- css links ----------------------->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- fav-icon -->
+    <link rel="shortcut icon" href="Images/favicon.ico ">
+    <!-- using fontawesome for icons ------------>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+
+</head>
+
+<body>
+    <!-- main-section --------------------->
+    <section class="main">
+        <!-- img -------------------------->
+        <div class="main-img">
+            <img src="Images/login">
+        </div>
+
+
+        <div class="text-btns">
+            <p>Hello , Thank you for choosing Ticket Please </p>
+
+            <!-- log-in and sign-up btns -->
+            <div class="btns">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="sign-up-btn">Sign Up</a>
+            </div>
+            <!--login-with-social-media -------------->
+            <span>
+                Or Via Social Media
+            </span>
+            <!-- social --------------------->
+            <div class="via-social">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-google"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <!-- side-login-bar ---------------------------->
+        <div class="side-login">
+
+            <!-- cancel-btn -------------------------->
+            <a href="#" class="login-cancel-btn">
+                <i class="fas fa-times"></i>
+            </a>
+
+
+
+
+            <strong>Sign In</strong>
+            <!-- form --------------------------------->
+            <form action="UserPage.html" method="POST">
+                <!-- email -------------------->
+                <label for="">Email<samp>*</samp></label>
+                <div class="email">
+                    <i class="far fa-paper-plane"></i>
+                    <input type="email" name="email" required>
+                </div>
+                <!-- password-------------------->
+                <label for="">Password<samp>*</samp></label>
+                <div class="password">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" required>
+                </div>
+                <!-- log-in-btn ---------------->
+                <input type="submit" name="LogIn" class="login" value="Log In">
+                <!-- forget -------------------->
+                <a href="#" class="forget">Forgot Your Password ? </a>
+            </form>
+            <!-- relative-bottom-text ----------------->
+            <div class="relative-text">
+                <span>
+                    Welcome To Ticket Please
+                </span>
+                <p>We Offer You The Best Movie-Ticket Booking Experience. But Due To Covid-19 We Are 
+                Only Renting Movies At A Very Affordable Price. So Stay Home And Rent Movies. </p>
+            </div>
+        </div>
+
+
+        <!-- side-sign-up-bar ---------------------------->
+        <div class="side-sign-up">
+
+            <!-- cancel-btn -------------------------->
+            <a href="#" class="sign-up-cancel-btn">
+                <i class="fas fa-times"></i>
+            </a>
+
+
+
+
+            <strong>Sign Up</strong>
+            <!-- form --------------------------------->
+            <form action="Login.html" method="POST">
+
+                <!-- full-name-------------------->
+                <label>Full Name<samp>*</samp></label>
+                <div class="name">
+                    <i class="far fa-copy"></i>
+                    <input type="text" name="fullname" required>
+                </div>
+
+                <!-- email -------------------->
+                <label for="">Email<samp>*</samp></label>
+                <div class="email">
+                    <i class="far fa-paper-plane"></i>
+                    <input type="email" name="email" required>
+                </div>
+                <!-- password-------------------->
+                <label for="">Password<samp>*</samp></label>
+                <div class="password">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" required>
+                </div>
+
+                <!-- sign-un-btn ---------------->
+                <input type="submit" name="Signup" class="sign-up" value="Sign Up">
+            </form>
+            <!-- relative-bottom-text ----------------->
+            <div class="relative-text">
+                <span>
+                    Sign Up For Better Experience
+                </span>
+                <p>Registering for this site allows you to access your order status and history. Just fill in the fields
+                    below, and we&#8217;ll get a new account set up for you in no time. We will only ask you for
+                    information necessary to make the purchase process faster and easier.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Jquery --------------------------------------->
+    <script type="
+    text/javascript" src="js/JQuery3.3.1.js"></script>
+    <!-- script -------------------------------------->
+    <script type="text/javascript">
+
+        $(document).on('click', '.login-btn,.sign-up-btn', function () {
+            $('.main').addClass('main-active')
+        });
+
+        $(document).on('click', '.login-btn', function () {
+            $('.side-login').addClass('side-login-active')
+        });
+
+        $(document).on('click', '.sign-up-btn', function () {
+            $('.side-sign-up').addClass('side-sign-up-active')
+        });
+        $(document).on('click', '.sign-up-cancel-btn,.login-cancel-btn', function () {
+            $('.main').removeClass('main-active')
+        });
+
+        $(document).on('click', '.login-cancel-btn', function () {
+            $('.side-login').removeClass('side-login-active')
+        });
+
+        $(document).on('click', '.sign-up-cancel-btn', function () {
+            $('.side-sign-up').removeClass('side-sign-up-active')
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+          alert("First Thing's First Login Please...");
+        })
+    </script>
+</body>
+
+</html>

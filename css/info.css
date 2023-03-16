@@ -1,0 +1,247 @@
+/* DESIGN OF BODY */
+body{
+    margin:0px;
+    padding:0px;
+    font-family:sans-serif;
+    background-color: rgba(151,151,151,0.03);
+}
+*{
+    box-sizing:border-box
+}
+a{
+    text-decoration: none;
+    color: #3a3a3a;
+}
+/* DESIGN OF CONTAINER OF FORM AND BUTTONS */
+.container{
+    height: 100vh;
+    width:100vw;
+    color:#5e5e5e;
+    padding-top:30px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Images/bg-login.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container h1 img{
+        margin: 30px;
+}
+.container h1{
+    font-weight: 500;
+    margin: 0px;
+    font-size: 3rem;
+    color:black;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#movieForm{
+height: 40%;
+margin: 0px;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.form-group{
+      height:20%;
+      width: 100%;
+      border-radius: 1px;
+      margin:30px;
+      display:flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+}
+.form-group .form-control{
+    height: 100%;
+    width:80%;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 1rem;
+    color:#5e5e5e;
+}
+.form-group .form-control:hover{
+        background-color: rgb(244, 253, 253);
+        color:black;
+}
+
+.btn,.btn a{
+    height:50px;
+    width:100px;
+    background-color: rgba(135, 206, 235);
+    border-radius: 3px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color:black;
+}
+.btn:hover,.btn a:hover{
+    background-color: rgb(80, 183, 228) ;
+    color: azure;
+}
+
+/* DESIGN OF OUTPUT PART */
+#out{
+    display: block;
+}
+.output{
+      height:100vh;
+      width:99vw;
+      margin:0px;
+      border-top: 2px solid rgba(53,53,53,0.1);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background-image: url(../Images/bg-login.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+#resultimg{
+    height:350px;
+    width:250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 10px 30px rgba(53,53,53,0.3);
+
+}
+#resultimg img{
+    border-radius: 10px;
+    box-shadow: 5px 10px 30px rgba(53,53,53,1);
+    object-fit: fill;
+    height: 350px;
+    width:250px;
+}
+
+#resultinfo{
+    height: 350px;
+    width: 515px;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    color:#5e5e5e;
+    box-shadow: 5px 10px 30px rgba(53,53,53,0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center ;
+}
+
+
+#resultinfo:hover,#resultimg:hover{
+    background-color: #f1fcfd;
+}
+
+#resultinfo p{
+    font-size: 1rem;
+    margin:0px;
+    color:#3a3a3a;
+    text-align: left;
+}
+#resultinfo span{
+    margin: -20px;
+    font-size: 1.8rem;
+    color: black !important;
+}
+#resultinfo .btn-rent{
+    height: 30px;
+    width:60px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(135, 206, 235);
+}
+#resultinfo .btn-rent:hover{
+    background-color: rgb(80, 183, 228) ;
+    color: azure;
+}
+#resultinfo h4{
+    margin:0px;
+}
+
+/* DESIGN OF FOOTER */
+footer{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  
+}
+
+footer{
+    color:#5e5e5e;
+    margin:10px 0px;
+    font-size:0.9rem;
+}
+
+/* SOME RESPONSIVENESS */
+@media(max-width:800px){
+    .container h1{
+        font-size: 2rem;
+    }
+    .form-group .form-control{
+        height: 60px;
+        width: 60%;   
+    }
+    .btn{
+        height: 40px;
+        width:100px
+    }
+    #resultinfo p{
+        font-size: 0.7rem;
+    }
+    #resultinfo span{
+        font-size: 1.2rem;
+    }
+    .btn-rent{
+        font-size: 0.5rem;
+        width: 70px;
+    }
+
+    .output{
+        height:100vh;
+        width:100%;
+        margin:0px;
+        border-top: 2px solid rgba(53,53,53,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-image: url(../Images/bg-login.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+  }
+
+  #resultinfo{
+    height: 255px;
+    width: 90%;
+    padding-left:1%;
+    text-align: center;
+    color:#5e5e5e;
+    box-shadow: 5px 10px 30px rgba(53,53,53,0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center ;
+}
+  
+}

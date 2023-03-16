@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Please</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="css/thanku.css">
+    <!-- fav-icon -->
+    <link rel="shortcut icon" href="Images/favicon.ico ">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="container-text">
+            <h1>Ticket Please</h1>
+            <p>
+            <h2>Payment Completed !</h2>Hope You Liked Our Collection Of Movies .
+            <p>
+             Thank You For Purchase ! <span id="result-name"></span> .
+             </p>
+            </p>
+            <a href="UserPage.html">Continue Shopping</a>
+            
+            <div class="image">
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<!-- script-for retrieving name from payment.html page -->
+<script>
+      window.addEventListener('load',() =>{
+
+        const params = new URL(document.location).searchParams;
+        const name = params.get('nick');
+        document.getElementById('result-name').innerHTML = name;
+      });
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Please</title>
+    <!-- fav-icon ------------------------->
+    <link rel="shortcut icon" href="Images/favicon.ico ">
+    <!-- css file ------------------------->
+    <link rel="stylesheet" href="css/info.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- heading ------------------------------>
+
+        <h1><img src="Images/favicon.ico">Ticket Please</h1>
+        <!-- form --------------------------------->
+        <form id="movieForm" autocomplete="off">
+            <!-- SEARCH-BAR ----------------------->
+            <div class="form-group">
+                <input class="form-control" type="text" id="movie" placeholder="Search for movies..">
+            </div>
+
+            <div>
+                <button type="submit" class="btn" id="btn-search">
+                    Search
+                </button>
+                
+                <button class="btn" id="btn-search" onclick="location.href='#out'">
+                     Show 
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- container over ------------------------------------->
+    <!-- output div starts --------------------------------------------->
+    <div id="out">
+        <div class="output">
+            <div id="resultimg">
+            </div>
+
+            <div id="resultinfo">
+                <span></span>
+                <p id="genre"></p>
+                <a href="Payment.html"><button class="btn-rent"> RENT</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- footer ------------------------------>
+    <!-- footer ------------------------->
+    <footer>
+        <p>Ticket Please Ltd Consumer Website</p>
+        <p>Copyright 2020 - Cosmopolitans(Team-10)</p>
+    </footer>
+    <footer>
+        <p>Developed By :Kabeer Bhatt</p>
+    </footer>
+</body>
+
+<!-- scripts --------------------------------------->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+<!-- script of all the movie retrieving process ----------------------------->
+<script>
+    $(document).ready(function () {
+
+        // api key from OMDB---------------
+        var apikey = "90c3fca4";
+
+        $("#movieForm").submit(function (event) {
+            event.preventDefault();
+
+            var movie = $("#movie").val();
+            var resultimg = "";
+            var resultinfo = "";
+            var genre = "";
+            // these url send request to omdb database using api key -------------
+            var url = "http://www.omdbapi.com/?apikey=" + apikey;
+
+            $.ajax({
+                method: 'GET', url: url + "&t=" + movie,
+                success: function (data) {
+                    console.log(data)
+                    resultimg = `
+                       <img style ="float:left" class="img-thumbnail" width="200" height="200" src="${data.Poster}">
+                       `
+                    resultinfo = `
+                    <h3>${data.Title}</h3>
+                   `
+                    genre = `
+                     <p> <b>Language: </b> ${data.Language} <br> <b>RunTime:</b> ${data.Runtime} <br><b> Genre:</b> ${data.Genre} <br> <b>Release Date: </b>${data.Released} <br> <b> IMDB Rating: </b> ${data.imdbRating}</p>
+                     <br>
+                     <h4>About The Movie :</h4>
+                     <br>
+                     <marquee bgcolor="skyblue">${data.Plot}</marquee>
+                     <br>
+                    `
+                    $(".output #resultimg").html(resultimg);
+                    $(".output #resultinfo span").html(resultinfo);
+                    $(".output #resultinfo #genre").html(genre);
+                }
+            })
+        })
+    })
+</script>
+</html>
